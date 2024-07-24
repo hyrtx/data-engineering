@@ -1,3 +1,5 @@
+from math import pi
+
 # Exercícios
 
 # Inteiros
@@ -29,3 +31,34 @@ print(f"A divisão inteira entre {numero_1} e {numero_2} é {resultado}")
 numero_usuario = int(input("Escolha um número: "))
 resultado = numero_usuario ** 2
 print(f"O quadrado de {numero_usuario} é{resultado}")
+
+# Float
+# 6. Escreva um programa que receba dois números flutuantes e realize sua adição.
+numero_1 = float(input("Escolha um número decimal: "))
+numero_2 = float(input("Escolha outro número decimal: "))
+resultado = numero_1 + numero_2
+print(f"A soma de {numero_1} com {numero_2} é {resultado}")
+
+# 7. Crie um programa que calcule a média de dois números flutuantes fornecidos pelo usuário.
+numero_1 = float(input("Escolha um número decimal: "))
+numero_2 = float(input("Escolha outro número decimal: "))
+resultado = (numero_1 + numero_2) / 2
+print(f"A média de {numero_1} e {numero_2} é {resultado}")
+
+# 8. Desenvolva um programa que calcule a potência de um número
+# (base e expoente fornecidos pelo usuário).
+base_usuario = float(input("Escolha a base para o cálculo de potência: "))
+expoente_usuario = float(input("Agora, digite o expoente: "))
+resultado = base_usuario ** expoente_usuario
+print(f"{base_usuario} elevado a {expoente_usuario} é {resultado}")
+
+# 9. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
+temp_celsius = float(input("Digite a temperatura em Celsius: "))
+resultado = temp_celsius * 1.8 + 32
+print(f"{temp_celsius}ºC equivale a {resultado}ºF")
+
+# 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
+from math import pi
+raio = float(input("Digite o raio: "))
+resultado = pi * raio ** 2
+print(f"A área do circulo para um raio de {raio} é {resultado}")
