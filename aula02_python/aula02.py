@@ -62,3 +62,38 @@ from math import pi
 raio = float(input("Digite o raio: "))
 resultado = pi * raio ** 2
 print(f"A área do circulo para um raio de {raio} é {resultado}")
+
+# Strings
+
+# 11. Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
+texto = input("Escreve um texto: ").upper()
+print(texto)
+
+# 12. Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
+nome_usuario = input("Digite o seu nome completo: ").lower()
+print(nome_usuario)
+
+# 13. Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, 
+# imprima esta frase sem espaços em branco no início e no final.
+frase = input("Escreva uma frase: ").strip()
+print(frase)
+
+# 14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, 
+# em seguida, imprima o dia, o mês e o ano separadamente.
+data_usuario = input("Digite uma data no formato dd/mm/aaaa: ")
+lista_data = data_usuario.split("/")
+print(f"Dia: {lista_data[0]}; Mês: {lista_data[1]}; Ano: {lista_data[2]}.")
+
+# 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
+
+# Booleanos
+
+# 16. Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
+
+# 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
+
+# 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
+
+# 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
+
+# 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
