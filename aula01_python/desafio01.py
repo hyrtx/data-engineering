@@ -9,7 +9,6 @@ o usuário pelo nome e informando o valor do salário em comparação com o bôn
 # Instruções
 
 CONSTANTE_BONUS = 1000
-
 # 01. O programa deve começar solicitando ao usuário que insira seu nome.
 nome_usuario = str(input("Por favor, digite seu nome: "))
 

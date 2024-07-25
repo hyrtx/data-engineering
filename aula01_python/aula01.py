@@ -18,3 +18,11 @@ valor_02 = int(input("Digite o segundo valor: "))
 soma_valores = valor_01 + valor_02
 
 print(f"A soma dos valores é {soma_valores}")
+
+# Exercício 03
+'''
+Refatore o exercicio 02 atribuindo variáveis
+
+O exercício 02 já foi feito inicialmente com atribuição de variáveis
+'''
+
