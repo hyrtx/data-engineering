@@ -126,9 +126,23 @@ else:
 resultado = valor_1 or valor_2
 print(resultado)
 
+# 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, 
+# em seguida, inverta esse valor.
+valor_1 = True
+resultado = not valor_1
 
-# 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
+print("Resultado do booleano inverso: {resultado}")
 
 # 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
+valor_1 = int(input("Digite um número: "))
+valor_2 = int(input("Digite outro número: "))
+resultado = valor_1 == valor_2
+
+print(f"O resultado é {resultado}")
 
 # 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
+valor_1 = int(input("Digite um número: "))
+valor_2 = int(input("Digite outro número: "))
+resultado = valor_1 != valor_2
+
+print(f"O resultado é {resultado}")
