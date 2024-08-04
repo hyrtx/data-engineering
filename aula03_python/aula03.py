@@ -192,10 +192,42 @@ loop até que não haja mais páginas.
 pagina_atual = 1
 paginas_totais = 5
 
-while pagina_atual != paginas_totais:
+while pagina_atual <= paginas_totais:
     print(f"Processamento da página {pagina_atual} feito.")
     pagina_atual += 1
 
 print(pagina_atual)
 print(paginas_totais)
 print("Todas as páginas foram processadas")
+
+# 14. Tentativas de Conexão
+'''
+Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+'''
+
+tentativa = 1
+tentativas_totais = 5
+
+while tentativa <= (tentativas_totais):
+    print(f"Tentativa de reconexão {tentativa} de {tentativas_totais}")
+    tentativa += 1
+    print("Reconectando...")
+
+print("Não foi possível conectar")
+
+# 15. Processamento de Dados com Condição de Parada
+'''
+Processar itens de uma lista até encontrar um valor específico que indica a parada.
+'''
+
+itens = [1, 2, 3, "parar", 4, 5]
+i = 0
+
+while i < len(itens):
+    
+    if itens[i] == "parar":
+        print(f"Palavra {itens[i]} encontrada. Encerrando o processo")
+        break
+    print(f"processando item {itens[i]}")
+    i += 1
+
