@@ -14,7 +14,7 @@ bonus_valido = False
 
 # Verificação do nome
 while not nome_valido:
-    nome_usuario = str(input("Por favor, digite seu nome: "))
+    nome_usuario = input("Por favor, digite seu nome: ").strip()
 
     if len(nome_usuario) == 0:
         print("Você não digitou nenhum caractere")
