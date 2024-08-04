@@ -164,3 +164,38 @@ for venda in vendas:
         vendas_por_categorias[categoria] = valor
 
 print(vendas_por_categorias)
+
+# 11. Leitura de Dados até Flag
+'''
+Ler dados de entrada ate que uma palavra-chave específica ("sair") seja fornecida.
+'''
+palavras = []
+
+while "sair" not in palavras:
+    palavra = input("Escolha uma palavra: ").lower()
+    palavras.append(palavra)
+
+# 12. Validação de Entrada
+'''
+Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+'''
+numero_escolhido = int(input("Escolha um número: "))
+
+while not 0 <= numero_escolhido <= 10:
+    numero_escolhido = int(input("Escolha um número: "))
+
+# 13. Consumo de API Simulado
+'''
+Simular o consumo de uma API paginada, onde cada "página" de dados é processada em 
+loop até que não haja mais páginas.
+'''
+pagina_atual = 1
+paginas_totais = 5
+
+while pagina_atual != paginas_totais:
+    print(f"Processamento da página {pagina_atual} feito.")
+    pagina_atual += 1
+
+print(pagina_atual)
+print(paginas_totais)
+print("Todas as páginas foram processadas")
