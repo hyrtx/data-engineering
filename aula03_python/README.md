@@ -1,7 +1,6 @@
-## Aula 02: BUG, IF, FOR, While, Listas e Dicionários em Python
+## Aula 03: BUG, IF, FOR, While, Listas e Dicionários em Python
 
-Material da aula 03, 
-
+Material da aula 03, onde foi explorado como utilizar o debug do VSCode, estrutura de controle de fluxo com for e while e entrou um pouco em listas e dicionários.
 
 No material consta os exercícios da aula e o desafio final.
 
