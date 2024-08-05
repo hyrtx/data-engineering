@@ -83,8 +83,17 @@ def validacao_bonus() -> float:
     
     return bonus_usuario
 
+def registro_usuario() -> dict:
+    usuario: dict = {}
+    usuario["nome"] = validacao_nome
+    usuario["salario"] = validacao_salario
+    usuario["bonus"] = validacao_bonus
+    return usuario
+
+dados_usuario = registro_usuario()
+
 # Cálculo do bonus
-bonus_calculado: float = CONSTANTE_BONUS + (salario_usuario * bonus_usuario)
+bonus_calculado: float = CONSTANTE_BONUS + (dados_usuario["salario"] * dados_usuario["salario"])
 
 # Impressão da mensagem para o usuário
-print(f"Olá {nome_usuario}, o seu valor bônus foi de {bonus_calculado}")
+print(f"Olá {dados_usuario["nome"]}, o seu valor bônus foi de {bonus_calculado}")
