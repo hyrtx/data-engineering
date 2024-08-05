@@ -8,6 +8,31 @@ salario_valido: bool = False
 bonus_valido: bool = False
 
 # Verificação do nome
+def validacao_nome(nome_usuario: str) -> bool:
+    '''
+    Função para verificar se o nome digitado pelo usuário é valido, retornando False caso
+    algum erro seja identificado em True caso não exista erros no nome digitado.
+    '''
+
+    # Verifica se algo foi digitado no nome, retornando False no caso de hipótese validada.
+    if len(nome_usuario) == 0:
+        return False
+    
+    # Verifica se foi digitado apenas espaços, retornando False no caso de hipótese validada.
+    elif nome_usuario.isspace():
+        return False
+    
+    # Se nenhum erro for identificado, retorna True
+    else:
+        return True
+
+def salario_valido(salario_usuario: float) -> bool:
+    return None
+
+def bonus_valido(bonus_usuario: float) -> bool:
+    return None
+
+
 while not nome_valido:
     nome_usuario: str = input("Por favor, digite seu nome: ").strip()
 
