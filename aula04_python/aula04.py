@@ -106,11 +106,29 @@ print(f"Valores Ímpares: {impares}")
 '''
 Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
 '''
+produtos: list = [
+    {"id": 1, "nome": "Teclado", "preço": 100},
+    {"id": 2, "nome": "Mouse", "preço": 80},
+    {"id": 3, "nome": "Monitor", "preço": 300}
+]
+
+# Atualizar o preço do produto com id 2 para 90
+for produto in produtos:
+   if produto["id"] == 2:
+      produto["valor"] = 90
+
+print(produtos)
 
 # 12. Fusão de Dicionários
 '''
-Dados dois dicionários, fundi-los em um único dicionário.
+Dado dois dicionários, fundi-los em um único dicionário.
 '''
+
+dicionario1: dict = {"a": 1, "b": 2}
+dicionario2: dict = {"c": 3, "d": 4}
+dicionario_fundido: dict = {**dicionario1, **dicionario2}
+
+print(dicionario_fundido)
 
 # 13. Filtragem de Dados em Dicionário
 '''
