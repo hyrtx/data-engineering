@@ -134,17 +134,44 @@ print(dicionario_fundido)
 '''
 Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
 '''
+estoque: dict = {"Teclado": 10, "Mouse": 0, "Monitor": 3, "CPU": 0}
+estoque_c_qtd: dict = {}
+
+for k, v in estoque.items():
+   if v > 0:
+      estoque_c_qtd[k] = v
+
+print(estoque_c_qtd)
 
 # 14. Extração de Chaves e Valores
 '''
 Dado um dicionário, criar listas separadas para suas chaves e valores.
 '''
 
+dicionario: dict = {"a": 1, "b": 2, "c": 3}
+chaves: list = []
+valores: list = []
+
+for k, v in dicionario.items():
+   chaves.append(k)
+   valores.append(v)
+
+print(chaves)
+print(valores)
+
 # 15. Contagem de Frequência de Itens
 '''
 Dada uma string, contar a frequência de cada caractere usando um dicionário.
 '''
 
+texto = "engenharia de dados"
+frequencia: dict = {}
+
+for s in texto:
+   frequencia[s] = frequencia.get(s, 0) + 1
+
+print(frequencia)
+      
 # 16. Escreva uma função que receba uma lista de números e retorne a soma de todos os números.
 
 # 17. Crie uma função que receba um número como argumento e retorne True se o número for primo e 
