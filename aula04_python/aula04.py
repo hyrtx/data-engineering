@@ -42,3 +42,64 @@ for item in lista_compras:
 
 print(f"Preço Total: {sum(soma_precos)}")
    
+# 6. Eliminação de Duplicatas
+'''
+Dada uma lista de emails, remover todos os duplicados.
+'''
+emails: list = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
+emails_tratados: list = list(set(emails))
+
+print(emails_tratados)
+
+# 7. Filtragem de Dados
+'''
+Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
+'''
+idades: list = [22, 15, 30, 17, 18]
+idades_filtradas: list = []
+
+for idade in idades:
+   if idade >= 18:
+      idades_filtradas.append(idade)
+
+print(idades_filtradas)
+
+# 8. Ordenação Personalizada
+'''
+Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
+'''
+pessoas = [
+    {"nome": "Alice", "idade": 30},
+    {"nome": "Bob", "idade": 25},
+    {"nome": "Carol", "idade": 20}
+]
+
+pessoas.sort(key= lambda x:x["nome"])
+print(pessoas)
+
+# 9. Agregação de Dados
+'''
+Dado um conjunto de números, calcular a média.
+'''
+numeros: list = [10, 20, 30, 40, 50]
+media: float = sum(numeros) / len(numeros)
+print(media)
+
+# 10. Divisão de Dados em Grupos
+'''
+Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
+'''
+valores: list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+pares: list = []
+impares: list = []
+
+for valor in valores:
+  if valor % 2 == 0:
+    pares.append(valor)
+  else:
+    impares.append(valor)
+
+print(f"Valores Pares: {pares}")
+print(f"Valores Ímpares: {impares}")
+
+     
