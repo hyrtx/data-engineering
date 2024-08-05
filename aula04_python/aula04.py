@@ -174,13 +174,72 @@ print(frequencia)
       
 # 16. Escreva uma função que receba uma lista de números e retorne a soma de todos os números.
 
+lista_numeros: list = [10, 20, 30, 40, 50]
+
+def somar_numeros(numeros: list) -> float:
+   numeros_somados: float = sum(numeros)
+
+   return numeros_somados
+  
+print(somar_numeros(lista_numeros))
+
 # 17. Crie uma função que receba um número como argumento e retorne True se o número for primo e 
 # False caso contrário.
 
+def identificar_numero_primo(numero: int) -> int:
+   if numero < 2:
+      return False
+   
+   for i in range(2, numero +1):
+      if numero % 1 == 0:
+         if i == numero:
+            return True
+         else:
+            return False
+  
+print(identificar_numero_primo(7))
+
 # 18. Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
+
+def inverter_string(texto: str) -> str:
+   return texto[::-1]
+
+print(inverter_string("Análise de Dados"))
 
 # 19. Implemente uma função que receba dois argumentos: uma lista de números e um número. 
 # A função deve retornar todas as combinações de pares na lista que somem ao número dado.
 
-# 20. Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
-     
+lista_de_numeros: list = [10, 20, 30, 40, 50]
+
+def pares(lista_numeros: list, numero: int) -> list:
+   nova_lista_numeros: list = []
+   for n in lista_numeros:
+      numero_somado: int = n + numero
+      nova_lista_numeros.append(numero_somado)
+   
+   return nova_lista_numeros
+
+print(pares(lista_de_numeros, 100))
+
+# 20. Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas.
+
+def ordenar_dicionario(dicionario: dict) -> list:
+   chaves: list = []
+   for k, v in dicionario.items():
+      chaves.append(k)
+   chaves.sort()
+   return(chaves)
+
+frutas = {
+   "Banana": 10,
+   "Maçã": 20,
+   "Ameixa": 30,
+   "Uva": 40,
+   "Amora": 50,
+   "Morango": 60,
+   "Pêra": 70
+}
+
+print(ordenar_dicionario(frutas))
+
+
