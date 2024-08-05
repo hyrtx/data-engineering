@@ -1,4 +1,4 @@
-# Desafio: Tipar o desafio da aula 03.
+# Desafio: Refatorar o desafio da aula 03 usando Dicionário, Type Hint e Funcões.
 
 # Variáveis para controle do loop
 
