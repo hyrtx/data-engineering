@@ -7,71 +7,81 @@ nome_valido: bool = False
 salario_valido: bool = False
 bonus_valido: bool = False
 
-# Verificação do nome
-def validacao_nome(nome_usuario: str) -> bool:
+def validacao_nome() -> str:
     '''
-    Função para verificar se o nome digitado pelo usuário é valido, retornando False caso
-    algum erro seja identificado em True caso não exista erros no nome digitado.
+    Função para verificar e assegurar que o nome digitado pelo usuário é valido,
+    retornando o salário se positivo.
     '''
-
-    # Verifica se algo foi digitado no nome, retornando False no caso de hipótese validada.
-    if len(nome_usuario) == 0:
-        return False
+    nome_valido: bool = False
     
-    # Verifica se foi digitado apenas espaços, retornando False no caso de hipótese validada.
-    elif nome_usuario.isspace():
-        return False
-    
-    # Se nenhum erro for identificado, retorna True
-    else:
-        return True
+    # Loop while para garantir que o preenchimento correto do nome seja feito
+    while not nome_valido:
+        nome_usuario: str = input("Por favor, digite seu nome: ").strip()
 
-def salario_valido(salario_usuario: float) -> bool:
-    return None
-
-def bonus_valido(bonus_usuario: float) -> bool:
-    return None
-
-
-while not nome_valido:
-    nome_usuario: str = input("Por favor, digite seu nome: ").strip()
-
-    if len(nome_usuario) == 0:
-        print("Você não digitou nenhum caractere")
-
-    elif nome_usuario.isspace():
-        print("Você digitou apenas espaços")
-    
-    else:
-        nome_valido = True
-
-# Verificação do salário
-while not salario_valido:
-    try:
-        salario_usuario: float = float(input("Agora, insira o seu salário: ").replace(",", "."))
-
-        if salario_usuario < 0:
-            print("Por favor, insira um salário positivo.")
+        # Assegura que a variável nome_usuario não esteja vazia
+        if len(nome_usuario) == 0:
+            print("Você não digitou nenhum caractere")
         
+        # Impede que a variável nome_usuario não seja composta de apenas espaços.
+        elif nome_usuario.isspace():
+            print("Você digitou apenas espaços")
+    
         else:
-            salario_valido = True
+            nome_valido: bool = True
+    
+    return nome_usuario
 
-    except ValueError:
-        print("Por favor, insira apenas números.")
+def validacao_salario() -> float:
+    '''
+    Função para verificar e assegurar que o salário foi digitado corretamente, retornando o 
+    salário do usuário.
+    '''
+    salario_valido: bool = False
 
-# Verificação do bonus
-while not bonus_valido:
-    try:
-        bonus_usuario: float = float(input("Por fim, digite o bonus recebido: ").replace(",", "."))
+    # Loop while para garantir que o salário seja corretamente preenchido
+    while not salario_valido:
 
-        if bonus_usuario < 0:
-            print("Por favor, insira um salário positivo.")
-        
-        else:
-            bonus_valido = True
+        try:
+            # Replace para garantir que o preenchimento possa ser feito por vírgula
+            salario_usuario: float = float(input("Agora, insira o seu salário: ").replace(",", "."))
+            
+            # Condicional para verificar se o salário é positivo
+            if salario_usuario < 0:
+                print("Por favor, insira um salário positivo.")
+            
+            else:
+                salario_valido: bool = True
 
-    except ValueError:
-        print("Por favor, insira apenas números.")
+        except ValueError:
+            print("Por favor, insira apenas números.")
+    
+    return salario_usuario
+
+def validacao_bonus() -> float:
+    '''
+    Função para verificar e assegurar que o bônus foi digitado corretamente, retornando o 
+    valor de bônus do usuário.
+    '''
+    bonus_valido: bool = False
+    
+    # # Loop while para garantir que o bônus seja corretamente preenchido
+    while not bonus_valido:
+
+        try:
+            # Replace para garantir que o preenchimento possa ser feito por vírgula
+            bonus_usuario: float = float(input("Por fim, digite o bonus recebido: ").replace(",", "."))
+            
+            # Condicional para verificar se o bonus é positivo
+            if bonus_usuario < 0:
+                print("Por favor, insira um bonus positivo.")
+            
+            else:
+                bonus_valido = True
+
+        except ValueError:
+            print("Por favor, insira apenas números.")
+    
+    return bonus_usuario
 
 # Cálculo do bonus
 bonus_calculado: float = CONSTANTE_BONUS + (salario_usuario * bonus_usuario)
