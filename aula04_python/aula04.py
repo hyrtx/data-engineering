@@ -102,4 +102,40 @@ for valor in valores:
 print(f"Valores Pares: {pares}")
 print(f"Valores Ímpares: {impares}")
 
+# 11. Atualização de Dados
+'''
+Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
+'''
+
+# 12. Fusão de Dicionários
+'''
+Dados dois dicionários, fundi-los em um único dicionário.
+'''
+
+# 13. Filtragem de Dados em Dicionário
+'''
+Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
+'''
+
+# 14. Extração de Chaves e Valores
+'''
+Dado um dicionário, criar listas separadas para suas chaves e valores.
+'''
+
+# 15. Contagem de Frequência de Itens
+'''
+Dada uma string, contar a frequência de cada caractere usando um dicionário.
+'''
+
+# 16. Escreva uma função que receba uma lista de números e retorne a soma de todos os números.
+
+# 17. Crie uma função que receba um número como argumento e retorne True se o número for primo e 
+# False caso contrário.
+
+# 18. Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
+
+# 19. Implemente uma função que receba dois argumentos: uma lista de números e um número. 
+# A função deve retornar todas as combinações de pares na lista que somem ao número dado.
+
+# 20. Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
      
