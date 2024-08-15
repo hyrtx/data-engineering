@@ -2,20 +2,15 @@
 
 # Variáveis para controle do loop
 
-CONSTANTE_BONUS: float = 1000
-nome_valido: bool = False
-salario_valido: bool = False
-bonus_valido: bool = False
+CONSTANTE_BONUS: float = 1000 # O Bonus sempre parte de R$ 1000
 
 def validacao_nome() -> str:
     '''
     Função para verificar e assegurar que o nome digitado pelo usuário é valido,
     retornando o salário se positivo.
-    '''
-    nome_valido: bool = False
-    
+    '''    
     # Loop while para garantir que o preenchimento correto do nome seja feito
-    while not nome_valido:
+    while True:
         nome_usuario: str = input("Por favor, digite seu nome: ").strip()
 
         # Assegura que a variável nome_usuario não esteja vazia
@@ -27,7 +22,7 @@ def validacao_nome() -> str:
             print("Você digitou apenas espaços")
     
         else:
-            nome_valido: bool = True
+            break
     
     return nome_usuario
 
@@ -36,10 +31,8 @@ def validacao_salario() -> float:
     Função para verificar e assegurar que o salário foi digitado corretamente, retornando o 
     salário do usuário.
     '''
-    salario_valido: bool = False
-
     # Loop while para garantir que o salário seja corretamente preenchido
-    while not salario_valido:
+    while True:
 
         try:
             # Replace para garantir que o preenchimento possa ser feito por vírgula
@@ -50,7 +43,7 @@ def validacao_salario() -> float:
                 print("Por favor, insira um salário positivo.")
             
             else:
-                salario_valido: bool = True
+                break
 
         except ValueError:
             print("Por favor, insira apenas números.")
@@ -61,11 +54,9 @@ def validacao_bonus() -> float:
     '''
     Função para verificar e assegurar que o bônus foi digitado corretamente, retornando o 
     valor de bônus do usuário.
-    '''
-    bonus_valido: bool = False
-    
+    '''    
     # # Loop while para garantir que o bônus seja corretamente preenchido
-    while not bonus_valido:
+    while True:
 
         try:
             # Replace para garantir que o preenchimento possa ser feito por vírgula
@@ -76,7 +67,7 @@ def validacao_bonus() -> float:
                 print("Por favor, insira um bonus positivo.")
             
             else:
-                bonus_valido = True
+                break
 
         except ValueError:
             print("Por favor, insira apenas números.")
@@ -85,15 +76,15 @@ def validacao_bonus() -> float:
 
 def registro_usuario() -> dict:
     usuario: dict = {}
-    usuario["nome"] = validacao_nome
-    usuario["salario"] = validacao_salario
-    usuario["bonus"] = validacao_bonus
+    usuario["nome"] = validacao_nome()
+    usuario["salario"] = validacao_salario()
+    usuario["bonus"] = validacao_bonus()
     return usuario
 
 dados_usuario = registro_usuario()
 
 # Cálculo do bonus
-bonus_calculado: float = CONSTANTE_BONUS + (dados_usuario["salario"] * dados_usuario["salario"])
+bonus_calculado: float = CONSTANTE_BONUS + (dados_usuario["salario"] * dados_usuario["bonus"])
 
 # Impressão da mensagem para o usuário
-print(f"Olá {dados_usuario["nome"]}, o seu valor bônus foi de {bonus_calculado}")
+print(f"Olá {dados_usuario['nome']}, o seu valor bônus foi de {bonus_calculado}")
