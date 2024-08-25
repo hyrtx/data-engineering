@@ -1,8 +1,8 @@
 # Aula 01 - Visão Geral e Preparação do ambiente SQL
 
-## Introdução
+Este README foi adaptado do [repositório](https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Bootcamp%20-%20SQL%20e%20Analytics), referente **Bootcamp SQL & Analytics** da [Jornada de Dados](https://suajornadadedados.com.br/). O material foi adaptado para fins de estudo e acompanhamento das aulas. O conteúdo original é de autoria da equipe da Jornada de Dados.
 
-Este README é referente ao curso [Bootcamp SQL & Analytics](https://github.com/lvgalvao/data-engineering-roadmap/tree/main/Bootcamp%20-%20SQL%20e%20Analytics). do Luciano Galvão. A documentação original do Bootcamp você pode encontrar no link.
+## Objetivo
 
 O objetivo da primeira aula é mergulhar nos conceitos básicos de bancos de dados e como o PostgreSQL pode ser utilizado para gerenciar dados de forma eficiente. 
 
@@ -30,7 +30,6 @@ Além disso, o PostgreSQL pode ser estendido pelo usuário de várias maneiras, 
 Recomendações de outros lugares para estudo.
 
 [Documentação](https://www.postgresql.org/docs/current/index.html) Documentação oficial do Postgres, todas as features estão aqui.
-
 
 [Wiki](https://wiki.postgresql.org/wiki/Main_Page) A wiki do PostgreSQL contém a lista de Perguntas Frequentes (FAQ), lista de tarefas pendentes (TODO) e informações detalhadas sobre muitos outros tópicos.
 
